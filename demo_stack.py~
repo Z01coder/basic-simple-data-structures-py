@@ -1,0 +1,26 @@
+# Демонстрация 
+class Stack:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        return self.stack.pop() if not self.is_empty() else None
+
+    def peek(self):
+        return self.stack[-1] if not self.is_empty() else None
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
+# Пример работы со стеком
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+print("Стек после добавления элементов:", stack.stack)
+print("Верхний элемент стека:", stack.peek())
+stack.pop()
+print("Стек после удаления элемента:", stack.stack)
